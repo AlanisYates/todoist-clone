@@ -3,6 +3,8 @@ import moment from 'moment';
 import { firebase } from '../firebase';
 import { collatedTasksExists } from '../helpers';
 
+
+
 export const useTasks = selectedProject => {
     const [tasks, setTasks] = useState([]);
     const [archivedTasks, setArchivedTasks] = useState([]);
@@ -55,7 +57,7 @@ export const useProjects = () => {
             .firestore()
             .collection('projects')
             .where('userId', '==', '1225')
-        orderBy('projectId')
+            .orderBy('projectId')
             .get()
             .then(snapshot => {
                 const allProjects = snapshot.docs.map(project => ({
