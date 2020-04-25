@@ -6,13 +6,12 @@ export const Tasks = () => {
 
     const { tasks } = useTasks('1');
 
-    console.log(tasks);
 
     let projectName = '';
 
     return (
-        <div className="tasks" data-testId="tasks">
-            <h2 data-testId="project-name">{projectName}</h2>
+        <div className="tasks" data-testid="tasks">
+            <h2 data-testid="project-name">{projectName}</h2>
 
             <div className="tasks__list">
                 {tasks.map(task => (
