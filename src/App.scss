@@ -419,7 +419,7 @@
    /* Show Confirm Delete
      ============================================ */
    .project-delete-modal {
-    //  position: relative;
+     position: relative;
    
      &__inner {
        @include box-overlay();
